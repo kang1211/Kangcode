@@ -1,5 +1,10 @@
 .house{
     border-collapse:collapse;
+    width:700px;
+}
+.house tr td{
+    border:2px solid rgb(226, 226, 226);
+    height:30px;
 }
 .chart{
     border-bottom:3px solid rgb(226, 226, 226);
@@ -9,29 +14,18 @@
     background-color:darkblue;
     color:white;
 }
+.detail{
+    width:250px;
+}
+.income, .expense, .payment{
+    width:150px;
+}
 .dateCell{
     background-color:rgb(240, 180, 30);
     width:70px;
-    height:30px;
     text-align:center;
     font-size:medium;
 }
-.detailCell{
-    width:250px;
-}
-tr td{
-    border:2px solid rgb(226, 226, 226);
-}
-.income{
-    width:150px;
-}
-.expense{
-    width:150px;
-}
-.payment{
-    width:150px;
-}
-
 .incomeCell{
     text-align:center;
     background-color:darkgreen;
@@ -43,4 +37,7 @@ tr td{
 }
 .paymentCell{
     text-align:center;
+}
+.detailCell:hover{
+    background-color:gray;
 }
