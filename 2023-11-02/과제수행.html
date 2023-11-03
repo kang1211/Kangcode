@@ -6,55 +6,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS와 class를 활용한 작성</title>
+    <link rel="shortcut icon" href="./AnyConv.com__웹페이지아이콘.ico" />
     <style>
-      table 
-      {
-        border-collapse: collapse;
-      }
-      .a{
-        width:200px;
-        height:100px;
-        border: 5px solid red;
-      }
-      .b{
-        width:600px;
-        height:100px;
-        border: 5px solid red;
-      }
-      .f{
-        width:200px;
-        height:100px;
-        border: 5px solid red;
-      }
-      .g{
-        background-color:yellow;
-        border:1px solid red;
-        width:400px;
-        height:700px;
-      }
-      .i{
-        background-color:greenyellow;
-        border:1px solid red;
-        width:400px;
-        height:700px;
-      }
-      .k{
-        background-color:lightblue;
-        border:1px solid red;
-        height:700px;
-      }
-     
+      /* 
+      .은 클래스를 의미한다. html태그에 부여한 class명이 A라면 .A{    } 로 작성해야 한다.
+      여러개의 클래스를 한번에 선택하여 스타일을 적용하려면
+      클래스명 사이사이에 ,를 넣어서 표현한다.
+      */
+      .box {border-collapse: collapse;width: 1000px;height: 800px;}
+
+      .a,.f {width: 200px;}
+      /* a, f클래스를 모두 선택*/
+      
+      .b {width: 600px;}
+
+      .top td {border: 5px solid red;height: 100px;}
+
+      .g,.i {width: 400px;background-color: orange;}
+      /* g,i 클래스를 모두 선택*/
+      
+      .i {background-color: greenyellow;}
+
+      .k {background-color: lightblue;}
+
+      .content td {border: 1px solid black;height: 700px;}
+      /* content에 있는 모든 td에 스타일 부여 */
+
     </style>
   </head>
 
   <body>
-    <table>
-      <tr>
+    <table class="box">
+      <tr class="top">
         <td class="a"></td>
         <td class="b" colspan="3"></td>
         <td class="f"></td>
       </tr>
-      <tr>
+      <tr class="content">
         <td class="g" colspan="2"></td>
         <td class="i" colspan="2"></td>
         <td class="k"></td>

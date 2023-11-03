@@ -1,0 +1,46 @@
+.house{
+    border-collapse:collapse;
+}
+.chart{
+    border-bottom:3px solid rgb(226, 226, 226);
+}
+.chart th{
+    border:1px solid rgb(226, 226, 226);
+    background-color:darkblue;
+    color:white;
+}
+.dateCell{
+    background-color:rgb(240, 180, 30);
+    width:70px;
+    height:30px;
+    text-align:center;
+    font-size:medium;
+}
+.detailCell{
+    width:250px;
+}
+tr td{
+    border:2px solid rgb(226, 226, 226);
+}
+.income{
+    width:150px;
+}
+.expense{
+    width:150px;
+}
+.payment{
+    width:150px;
+}
+
+.incomeCell{
+    text-align:center;
+    background-color:darkgreen;
+}
+.expenseCell{
+    text-align:center;
+    background-color:rgb(139, 8, 8);
+    color:white;
+}
+.paymentCell{
+    text-align:center;
+}
