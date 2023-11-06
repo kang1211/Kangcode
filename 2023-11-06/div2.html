@@ -1,0 +1,79 @@
+<!--div2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #div1{
+        width:500px;
+        height:350px;
+        background:paleturquoise;
+        box-sizing:border-box;
+        /* padding-top:1px; */
+        padding-top:200px;
+    }
+    #div1Child1{
+        width:100px;
+        height:100px;
+        background:red;
+        box-sizing:border-box;
+        margin-left:250px;
+        /* margin-top:200px; */
+        color:white;
+        font-size:25px;
+        font-weight:lighter;
+    }
+    #div1Child2{
+        width:100px;
+        height:100px;
+        background:blue;
+        box-sizing:border-box;
+        margin-left:100px;
+        color:white;
+        font-size:25px;
+        font-weight:lighter;
+    }
+    #div2{
+        width:200px;
+    }
+    #div2 img{
+        width:100%;
+        opacity:0.4;/*투명도를 나타내는 태그*/
+        transition:all 1s ease;/*변화가 있을경우에 대한 반응태그*/
+    }
+    #div2 h2{
+        margin-top:-50px;
+    }
+    #div2:hover img{
+        opacity:1.0;
+        cursor:cell;
+    }
+    #div3{
+        width:200px;
+        height:300px;
+        background:url(./static/images/메모장도되나.txt);
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        /* background-size:contain; */
+        /*background-size에서 cover인 경우에는 원본 해상도를 깨고 사이즈를 억지로 맞추지만 
+        contain을 사용하는 경우는 크기에 맞춰 사진이 반복되어 표시된다.*/
+    }
+</style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div1Child1">child1</div>
+        <div id="div1Child2">child2</div>
+    </div>
+    <div id="div2">
+        <img src="./static/images/학습자료2.jpg" alt="메이크업">
+        <h2>메이크업사진</h2>
+    </div>
+    <div id="div3">
+
+    </div>
+</body>
+</html>

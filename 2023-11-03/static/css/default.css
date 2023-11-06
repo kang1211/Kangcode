@@ -36,7 +36,7 @@ body{
 .drinkmenu{
     list-style:none;
     font-size:20px;
-    font-weight:800;
+    font-weight:100;
 }
 .drinkmenu li{
     height:35px;
@@ -77,3 +77,4 @@ height:100%;}
 /* 4. id와 같은 고유명사는 다른 명령권자보다 우선순위가 높다.*/
 /* 5. 테이블에 높이를 부여하더라도 안에 들어가는 내용물이 넘어가면 정해진 너비 이상으로 변경된다.*/
 /* 6. 커서가 올라갔을때 생기는 반응 :hover*/
+/* 7. margin함수는 외부의 간격, padding함수는 내부의 간격을 조절한다*/

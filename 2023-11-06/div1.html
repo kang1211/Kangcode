@@ -1,0 +1,110 @@
+<!--div1.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #box1{
+        width:400px;
+        height:300px;
+        border:1px solid red;
+        background:rgb(22, 75, 22);
+        border-radius:20px;
+        padding:20px 100px;
+        margin-top:100px;
+    }
+    #box2{
+        width:200px;
+        height:100px;
+        background:rgb(129, 20, 255);
+        margin-top: -220px;
+        margin-left: 200px;
+
+    }
+
+    #box3{
+        box-sizing:border-box;/*안쪽여백, 테두리선에 의해 크기가 변하지 않는다.*/
+        width:500px;
+        /*height:400px;*/
+        background:blue;
+        padding:150px 175px;
+        margin-top:120px;
+    }
+
+    #box4{
+        width:150px;
+        height:100px;
+        background:khaki;
+    }
+
+    #box5{
+        width:600px;
+        /* height:50px; */
+        background:orange;
+        text-align:center;
+        padding:20px;
+        box-sizing:border-box;        
+    }
+    
+    #box6{
+        width:500px;
+        background:hotpink;
+        text-align:right;
+        padding-right:10px;
+        box-sizing:border-box;
+    }
+    /* #test{
+        background:red;
+        margin-top:-70px;
+    } */
+    /*
+    padding으로 생성된 공간은 내부에서 사용불가이다.(텍스트, 이미지 등등)
+    div영역 안에 특정 태그의 위치를 이동시키고 다른 공간에 텍스트나 이미지를
+    표현하고자한다면 padding이 아닌 margin으로 이동시켜야 한다.
+
+    padding은 안쪽에 사용 할수 없는 공간을 생성 하는것이다.
+    margin은 기본적으로 사용할수 없는 바깥쪽 공간을 생성하는것이기때문에
+    div영역 내부에 표시되는 내용에는 영향을 주지 않는다.
+
+    하여 영역 안쪽의 태귿들의 위치를 설정 하기위해서는 padding을
+    영역의 화면에서 위치를 선정하기 위해서 margin을 사용한다.
+    */
+</style>
+</head>
+<body>
+    <!--
+        태그에 적용할수 있는 여백
+        margin - 바깥여백
+        padding - 안쪽여백
+        공간(영역)태그
+        p, h123456, 
+        div - 레이아웃을 작성(division분할)
+        div 태그를 이용하여 화면을 분할해서 사용 할 수 있다.
+        메뉴 영역, 사이드영역, 본문영역, 바닥 영역 등등
+        div가 가진 css 속성은 단 하나 display:block; 이다.
+        block값은 면적을 의미한다.
+
+        iframe - 다른html페이지를 현재 페이지에 포함
+        header - 메뉴, 로고, 제목, 머리글
+        nav - header안에서 메뉴를 작성
+        main - 페이지내의 중심주제, 주요내용, 콘텐츠
+        section - 주제별, 카테고리별, 테마별
+        article - 기사, 블로그전체내용, 텍스트 중심글
+        footer- 바닥글
+        aside - 본문 외 좌우측 사이드의 내용
+        figure - 이미지, 다이어그램, 영상 등 독립적인 컨텐츠
+    -->
+    <div id="box1"></div>
+    
+    <div id="box2"></div>
+   
+    <div id="box3">
+        <div id="box4"></div>
+    </div>
+<!-- <div id="test">가능할까?</div> -->
+    <div id="box5">입양 가능! 새로운 가족을 기다리고 있어요</div>
+    <div id="box6">반려동물 사랑으로 입양하세요</div>
+</body>
+</html>
