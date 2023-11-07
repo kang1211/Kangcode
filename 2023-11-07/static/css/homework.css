@@ -1,0 +1,98 @@
+/*--------------------------------헤드라인-------------------------------------*/
+body{
+    margin:0;
+}
+#warp{
+    width:2000px;
+    margin:0 auto;
+    box-sizing:border-box;
+    position:relative;
+}
+
+#header{
+    width:100%;
+}
+.headline{
+    width:100%;
+    height:100px;
+    background:rgb(74, 74, 177);
+    font-size:40px;
+    padding-left:20%;
+    line-height:100px;
+    box-sizing:border-box;
+}
+.headline strong{
+    font-style:italic;
+    color:rgba(255, 255, 255, 0.911);
+}
+.menuWrap{
+    position:absolute;
+    top:0;
+    left:550px;
+    width:1000px;
+    height:100px;
+}
+.nav{
+    position:relative;
+}
+.menu{
+    width:150px;
+    text-align:center;
+    font-size:25px;
+    color:white;
+    position:absolute;
+    line-height:100px;
+}
+.menu:hover{
+    background:gray;
+    width:100px;
+    border-radius:30px;
+    cursor:pointer;
+}
+.nav .menu:nth-child(2){
+    left:150px;
+}
+.nav .menu:nth-child(3){
+    left:300px;
+}
+.nav .menu:nth-child(4){
+    left:450px;
+}
+
+/*---------------------------------중심글--------------------------------------*/
+#main{
+    height:1000px;
+    width:100%;
+}
+
+#mainCon{
+    background:gray;
+    width:2000px;
+    height:1000px;
+    border-collapse:collapse;
+    position:relative;
+}
+#first td:nth-child(3){
+    text-align:center;
+    width:500px;
+}
+.media{
+    line-height:500%;
+}
+#second{
+    background:rgba(245, 245, 245, 0.281);
+}
+.mainchart{
+    height:100px;
+    font-size:25px;
+}
+.img{
+    width:100%;
+    height:50%
+}
+/*---------------------------------아랫글--------------------------------------*/
+#foot{
+    text-align:center;
+    background-color:rgb(34, 34, 100);
+    color:blanchedalmond;
+}

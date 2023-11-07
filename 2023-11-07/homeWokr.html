@@ -6,7 +6,7 @@ div 태그를 사용하여
 마지막에 만든거 처럼 로고, 메뉴, 본문, foot 구성으로 만들기
 
 단, 본문에는 이미지로 채우지 말고 ul태그를 사용하여 몇개의 글 표시하기
--->>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,62 @@ div 태그를 사용하여
     <title>메인페이지만들기</title>
     <link rel="stylesheet" href="./static/css/homework.css">
 </head>
+
 <body>
-    
+    <div id="warp">
+<!--헤드라인---------------------------------------------------------------------->
+        <header id="header">
+            <div class="headline"><strong>K</strong>뉴스</div>
+            <div class="menuWrap">
+                <nav class="nav">
+                    <div class="menu">연애</div>
+                    <div class="menu">스포츠</div>
+                    <div class="menu">날씨</div>
+                    <div class="menu">프리미엄</div>
+                </nav>
+            </div>
+        </header>
+<!--중심글------------------------------------------------------------------------>
+        <main id="main">
+            <table id="mainCon">
+                <tr class="in" id="first">
+                    <td class="mainchart">
+                        <h2>소주 가격 내려가나...기재부,소주`증류주 기준판매비율 도입 검토</h2>
+                    </td>
+                    <td class="mainchart">
+                        <h2>AI열풍,반도체엔 신성장동력..."삼성,AI생태계에 중요한 역할 할 것"</h2>
+                    </td>
+                    <td rowspan="2" id="second">
+                        <h1>주요뉴스 보기</h1>
+                        <ul class="media">
+                            <li>빈대 공포에 호텔업계 방역 강화</li>
+                            <li>'입동'인 내일 더 추워요...</li>
+                            <li>페라리로 시속 167km</li>
+                            <li>겁난다, 해외여행...외국물가</li>
+                            <li>카톡 택시 확 바뀌나"환골탈태...매각은 없다"</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="in">
+                    <td>
+                        <img class="img" src="./static/image/과제사진1.jpg" alt="풍경1">
+                    </td>
+                    <td>
+                        <img class="img"  src="./static/image/과제사진2.jpg" alt="풍경2">
+                    </td>
+                </tr>
+            </table>
+        </main>
+<!--아랫글------------------------------------------------------------------------>
+        <footer id="foot">
+            <p class="footMenu">
+                <b>로그아웃 │ 전체서비스</b>
+            </p>
+            <address class="addr">
+                이용약관 │ 개인정보처리방침 │ 청소년 보호 책임자 : 홍길동 │서비스안내 <br>
+                각 언론사가 직접 콘텐츠를 편집합니다.
+            </address>
+        </footer>
+    </div>
 </body>
 </html>
