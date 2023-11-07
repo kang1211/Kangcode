@@ -1,4 +1,4 @@
-#out{
+.out{
 width:800px;
 height:250px;
 background:yellow;
@@ -6,14 +6,14 @@ box-sizing:border-box;
 padding-left:600px;
 }
 
-#in{
+.in{
 width:200px;
 height:50px;
 background:gray;
 /* margin-left:600px; */
 }
 
-#master{
+.master{
     width:400px;
     background:lightblue;
     text-align:center;
