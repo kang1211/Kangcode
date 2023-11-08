@@ -1,0 +1,94 @@
+<!--div4.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+<style>
+#box1{
+    background-color:aquamarine;
+    width:500px;
+    padding: 15px 0;
+
+}
+#bold{
+    background:pink;
+    width:200px;
+    height:100px;
+    /* display:block; */
+    /* display:inline-block; */
+    /* display:none; */
+    text-align:center;
+    line-height: 50px;
+    /*
+    dispaly는 화면에 표시하는 양식을 뜻한다
+    1. 블록 속성을 가지지 못한 태그에 display:block을 부여하면 속성 부여가 가능하다
+    2. display:inline은 b태그와 같은것이 가지고 있다. 너비와 높이는 글자크기에 제한한다
+    3. display:block속성을 가진 태그 옆(x축)에는 다른 태그가 옆에 자동으로 안온다 그 블럭태그가 x축을 기본적으로 전체차지하고 있기때문
+    4. display:inline-block태그는 x축을 공간을 양보한 block태그이다
+    5. display:none은 화면에 표시를 안한다
+    */
+}
+.menu{
+    padding: 0 20px;
+}
+#box2{
+    width:800px;
+    background-color:orangered;
+    color:black;
+}
+.menuList{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    /* padding:15px 0; */
+    height:50px;
+}
+.menuList li{
+    display:inline;
+    float:left;
+    padding:15px 20px;
+}
+</style>
+</head>
+
+<body>
+    <div id="box1">
+        <span class="menu">HOME</span>
+        <span class="menu">자동차</span>
+        <span class="menu">스포츠</span>
+        <span class="menu">영화</span>
+        <span class="menu">웹툰</span>
+    </div>
+    <h3>나는 헤드라인</h3>
+    <b id="bold">굵은글씨</b>
+    <i>테스트</i>
+    <div id="box2">
+        <ul class="menuList">
+            <li>HOME</li>
+            <li>자동차</li>
+            <li>스포츠</li>
+            <li>영화</li>
+            <li>웹툰</li>
+        </ul>
+    </div>
+    <!--
+        display:block; 가로방향으로 브라우저의 전체를 영역으로 표시하는 방법
+            display block을 가진 해당 태그 앞뒤로
+            줄바꿈(엔터)을 생성
+        display:inline; 태그의 앞뒤로 줄바꿈을 생성하지않는다.
+            너비, 높이가 적용되지않는다. 태그내부의
+            컨텐츠(텍스트,이미지,동영상 등등)크기 만큼만 적용된다.
+        display:inlin-block; inline처럼 줄바꿈이 생성되지 않지만
+            너비, 높이를 적용할수 있다.
+        display:none; display를 사용하지않게 된다.
+            즉, 화면에 표시 하지않는다.
+            display는 화면에 어떻게 표시할것인지를 정하는 속성이다.
+        display:flex; display???????
+        span 일부 효과부여
+        float 기준에서 정렬, html순서에 빠지게 된다
+
+    -->
+</body>
+</html>
