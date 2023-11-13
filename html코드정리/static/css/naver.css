@@ -1,0 +1,27 @@
+*{
+    margin:0; padding:0; box-sizing:border-box;
+}
+#header{
+    width:1280px;
+}
+#topSearchWrap{
+    z-index:120;
+    position:relative;
+    height:156px;
+    padding: 70px 0 42px;
+}
+.searchBar{
+    width:706px;
+    border-radius:33px;
+    border:1px solid #03c75a;
+    background-color:#fff;
+    display:block;
+}
+/*-----------------------------------------------------------------------------------*/
+#main{
+    width:1280px;
+}
+/*-----------------------------------------------------------------------------------*/
+#footer{
+    width:1903px;
+}
