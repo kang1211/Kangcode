@@ -14,6 +14,7 @@
 var com = parseInt(Math.random()*6+1);
 var me = parseInt(prompt("나의 주사위 값"));
 var result = (com > me) ? com + " 컴퓨터 승!" : me + " 나의 승!";
+result = (com == me) ? com + " 비김" : result;
 console.log("값은 : " + result);
 </script>
 </head>
