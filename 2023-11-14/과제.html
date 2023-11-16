@@ -11,11 +11,34 @@
     // 주사위 값이 크면 이기는 게임이다.
     // 내가 승리 했는가 패배했는가 출력하세요.
     // 단, 같은 숫자라면 비김
-var com = parseInt(Math.random()*6+1);
-var me = parseInt(prompt("나의 주사위 값"));
-var result = (com > me) ? com + " 컴퓨터 승!" : me + " 나의 승!";
-result = (com == me) ? com + " 비김" : result;
-console.log("값은 : " + result);
+// var com = parseInt(Math.random()*6+1);
+// var me = parseInt(prompt("나의 주사위 값"));
+// var result = (com > me) ? com + " 컴퓨터 승!" : me + " 나의 승!";
+// result = (com == me) ? com + " 비김" : result;
+// console.log("값은 : " + result);
+ var color = prompt("사각형 색상 입력(빨강, 노랑, 파랑)");
+    var size = prompt("크기입력 (1, 2, 3)");
+
+    var className = (color==="빨강" && size==="1") ? "red one" :
+        (color==="빨강" && size==="2") ? "red two" :
+        (color ==="빨강" && size==="3")? "red three" :
+        (color === "파랑" && size=="1") ? "blue one" :
+        (color === "파랑" && size=="2") ? "blue two" :
+        (color === "파랑" && size=="3") ? "blue three" :
+        (color === "노랑" && size=="1") ? "yellow one" :
+        (color === "노랑" && size=="2") ? "yellow two" :
+        (color === "노랑" && size=="3") ? "yellow three" : "";
+
+    document.write(`<div class="${className}"></div>`);
+<style>
+.red{ background:red;}
+.yellow{background:yellow;}
+.blue{ background:blue;}
+.one{ width:100px; height:100px;}
+.two{ width:200px; height:200px;}
+.three{ width:300px; height:300px;}
+</style>
+
 </script>
 </head>
 <body>
