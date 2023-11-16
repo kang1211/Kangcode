@@ -13,9 +13,21 @@
 //(2시간 1분 주차시 -1500원, 2시간 34분 주차시 -1800원)
 // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
 window.onload=function(){
-    var user = praseInt(prompt("주차시간(분단위)"));
+    var user = parseInt(prompt("주차시간(분단위)"));
     if(user <= 30){
         alert("주차요금 1000원");
+    }else if((user < 120) && (user>30)){
+        alert("주차요금 " + parseInt(1000 + parseInt((user-30)/10)*100) + "원");
+    }else if(user == 120){
+        alert("주차요금 1500원");
+    }else if((240 > user)&&(user>120)){
+        alert("주차요금 " + parseInt(1500 + parseInt((user-120)/10)*100) + "원");
+    }else if(user == 240){
+        alert("주차요금 2500원");
+    }else if((480>user)&&(user>240)){
+        alert("주차요금 " + parseInt(2500 + parseInt((user-240)/10)*100) + "원");
+    }else{
+        alert("주차요금 10000원");
     }
 
 
