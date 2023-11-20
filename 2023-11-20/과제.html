@@ -7,17 +7,26 @@
 <script>
     //내가 수를 정하고 컴퓨터가 그 수를 맞추는 업다운 게임
 
-    var me = praseInt(prompt("1에서 50사이의 숫자를 입력하세요."));
+    var me = parseInt(prompt("1에서 50사이의 숫자를 입력하세요."));
     var com = Math.floor(Math.random()*50+1);
-    for(;true;){
-        
+    count=0;
+    a =50-com+1;
+    b=1;
+    
+    for(;true;){    
         if(com < me){
-            com = Math.floor(Math.random()*(50-com+1)+com);
+            var b = com+1;
+            com = Math.floor(Math.random()*a+b);
+            count++
+        }else if(com > me){
+            var a = 50 - (50-com)-1;
+            com = Math.floor(Math.random()*a+b);
+            count++
         }
-        
-        if(me==com)
+        else if(me==com)
         break;
     }
+    document.write(`총 ${count} 회`);
 </script>
 
 </head>
