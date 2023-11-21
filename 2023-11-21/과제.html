@@ -21,10 +21,32 @@
         아동 : 1~7세
 
         총원 10명 : 노인 2명, 성인 5명, 청소년 2명, 아동 3명
-        
-        
-        
         */
+       var count = 0;
+       var a = 0;
+       var b = 0;
+       var c = 0;
+       var d = 0;
+       // 1. 나이 입력
+        while(!(age == 0))
+       {
+        var age = parseInt(prompt("나이를 입력하세요"));
+        if(age>=65){a++}
+        else if(age>=20){b++}
+        else if(age>=8){c++}
+        else{d++}
+        count++;
+        }
+       
+        // 2. 입력 종료
+        while(age == 0)
+        {
+        document.write(`노인 : 65세 이상 <br>성인 : 20세~64세<br>청소년 : 8세~19세<br>아동 : 1~7세<br>`);
+        document.write(`<br>총원 : ${count}명 : 노인 ${a}명, 성인 ${b}명, 청소년${c}명, 아동 ${d}명 `);
+        break;
+        }
+
+        //3. 
     </script>
 </head>
 <body>
