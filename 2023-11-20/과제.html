@@ -10,20 +10,23 @@
     var me = parseInt(prompt("1에서 50사이의 숫자를 입력하세요."));
     var com = Math.floor(Math.random()*50+1);
     count=0;
-    a =50-com+1;
-    b=1;
+    var a =50-com+1;
+    var b=1;
     
     for(;true;){    
         if(com < me){
-            var b = com+1;
-            com = Math.floor(Math.random()*a+b);
+            b = com+1;
+            c = a-b+1
+            com = Math.floor(Math.random()*c+b);
             count++
+            document.write(`값 : ${com} <br>`);
         }else if(com > me){
-            var a = 50 - (50-com)-1;
-            com = Math.floor(Math.random()*a+b);
+            a = 50 - (50-com)-1;//com-1
+            c = a-b+1
+            com = Math.floor(Math.random()*c+b);
             count++
-        }
-        else if(me==com)
+            document.write(`값 : ${com} <br>`);
+        }else
         break;
     }
     document.write(`총 ${count} 회`);
