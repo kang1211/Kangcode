@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+<script>
+var old=0, adult=0,teen=0,child=0,count=0;
+var end=true; // 구성원나이를 입력 가능 또는 입력 불가능하게 만들기위한 변수
+
+function survey(end)
+{
+var age = Number( $("#age").val());
+if(age>=65) old++;
+else if(20<=age && age<65) adult++;
+else if(8<=age && age<20) teen++;
+else if(1<=age && age<8) child++;
+else if(age==0){end=false;
+count--;
+}
+count++;
+$("#result").html(`총원${count-1}명 : 노인${old}, 성인${adult}, 청소년${teen}, 아동${child}`);
+}
+
+</script>
+<!----------------------------------------------------------------------------------------->
+
+<style>
+    input{width:50px;};
+</style>
+<!----------------------------------------------------------------------------------------->
+</head>
+<body>
+    <input type="text" id="age" min="0" max="110">
+    <button onclick="survey()">입력</button>
+    <div id="result"></div>
+</body>
+</html>
