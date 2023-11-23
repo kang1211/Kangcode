@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="./static/javascript/arr4.js"></script>
+<style>
+    *{
+        padding:0;
+        margin:0;
+        line-height:center;
+    }
+    #searchBar{
+        width:330px;
+        height:50px;
+        display:flex;
+        margin-top:20px;    
+        border-radius:30px;
+        border : 5px solid black;
+    }
+    #searchBar p{
+        width:100px;
+        text-align:center;
+        position:relative;
+        top:13px;
+    }
+    #title{
+        width:150px;
+        border:0;
+        outline:none;
+        box-sizing:border-box;
+    }
+    #searchBar button{
+        margin-left:10px;
+        width:50px;
+        border:0;
+        background-color:#fff;
+    }
+    #result{
+        margin-top : 50px;
+        width:330px;
+        text-align:center;
+    }
+</style>
+</head>
+<body>
+    <div id="searchBar">
+        <p>영화검색</p>
+        <input type="text" id="title">
+        <button onclick="search()">검색</button>
+    </div>
+    <div id="result"></div>
+</body>
+</html>
