@@ -32,22 +32,50 @@ $(function(){
 
 
 function endgame(){
-    var total = 0;
-    var a = 0;
-    for(idx=0+a;idx<=4+a;idx++){
-        total += board[idx];
-        if(idx == 4+a)
+var binggo = 0;
+//가로줄
+var total = 0;
+var a = 0;
+for(idx=0+a;idx<board.length;idx++){
+    total += board[idx];
+    if(idx == 4+a)
+    {
+        if(total == 0)
         {
-            if(total == 0)
-            {
-                $(".result").text("빙고");
-            }
-            a += 5;
-            total = 0;
-        };  
-    }
-    
-    //가로줄
+            binggo +=1;
+        }
+        a += 5;
+        total = 0;
+    };  
+}
+//세로줄
+var b = 0;
+for(idx=0;idx<board.length;idx++){
+    if(idx/5 == 0+b){
+        total += board[idx];
+        if(total == 0){
+            binggo +=1;
+        }
+    }else{b +=1}
+}
+
+
+
+
+
+
+//대각선줄
+
+
+
+//결과 출력
+if(binggo => 1){
+    document.write(`${binggo} 빙고`)
+}
+
+
+
+//가로줄   
     /*
     0 < idx < 5
     5 < idx < 10
@@ -58,6 +86,7 @@ function endgame(){
    // for문으로 idx가 0부터 4일때까지 board값을 모두 더함 = 0일 경우 빙고 1임
    // 빙고1일 경우 결과값에 저장 아닐경우는 넘기고 다음 5부터 9까지를 진행해야함
    // 이걸 총 5번 하면 가로 빙고를 모두 찾았음.
+   // 가로줄 전체 빙고 값은 0, 5, 10, 15, 20 일것
     
     //세로줄
     /*
