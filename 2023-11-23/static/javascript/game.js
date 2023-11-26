@@ -1,7 +1,6 @@
 let board=new Array();
 
 // 중복없이 25개 숫자 저장하기
-
 for(var i=1; i<=25; i++){
     var tmp = Math.floor(Math.random()*100)+1;
     if(board.indexOf(tmp) == -1)
@@ -10,8 +9,8 @@ for(var i=1; i<=25; i++){
         i--;
 }
 
-// for(var i=0; i<board.length;i++)
-// var v=board[i];
+for(var i=0; i<board.length;i++)
+var v=board[i];
 
 
 $(function(){
@@ -21,57 +20,147 @@ $(function(){
 
 
     $(".numBox").on("click",function(){
-    $(this).css("background", "black");
-    $(this).css("color","white");
-    $(".numBox").index(this);
-    board[idx]=0;
-    endgame();
+        $(this).css("background", "black");
+        $(this).css("color","white");
+        var idx =  $(".numBox").index(this);
+        board[idx]=0;
+        endgame();
     });
-
 });
 
 
-function endgame(){
-var binggo = 0;
+function endgame()
+{
+var bingo = 0;
 //가로줄
-var total = 0;
-var a = 0;
-for(idx=0+a;idx<board.length;idx++){
-    total += board[idx];
-    if(idx == 4+a)
-    {
-        if(total == 0)
-        {
-            binggo +=1;
-        }
-        a += 5;
-        total = 0;
-    };  
-}
+// var totala = 0;
+// var a = 0;
+// var k = 0;
+// for(i=0+a;i<25;i++){
+//     totala += board[i];
+//     if(i == 4+a)
+//     {
+//         if(totala == 0)
+//         {
+//             bingo +=1;
+//         }
+//         a += 5;
+//         totala = 0;
+//     };  
+// }
 //세로줄
 var b = 0;
-for(idx=0;idx<board.length;idx++){
-    if(idx/5 == 0+b){
-        total += board[idx];
-        if(total == 0){
-            binggo +=1;
-        }
-    }else{b +=1}
+var totalb = 0;
+// for(i=0;i<5;i++){
+//     for(var k=0; k<5;k++){
+//         totalb += board[i][b]
+//         if(totalb == 0){
+//             bingo+=1;
+//         }
+//         b++;
+//         }
+//     }
+for(i=0;i<25;i++){
+    if(i%5 == b){
+    totalb = board[0+b]+board[5+b]+board[10+b]+board[15+b]+board[20+b];
+    if(totalb == 0){bingo++;break;continue;}
+    }b++; 
 }
 
-
-
-
-
-
+// for(i=0;i<25;i++){
+//     if(i%5 == 0+b)
+//     {
+//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
+//     if(totalb == 0){
+//         bingo +=1;
+//         break;
+//     }
+//     }
+//     b++;
+//     }
+// for(i=0;i<25;i++){
+//     if(i%5 == 0+b)
+//     {
+//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
+//     if(totalb == 0){
+//         bingo +=1;
+//         break;
+//     }
+//     }
+//     b++;
+//     }
+// for(i=0;i<25;i++){
+//     if(i%5 == 0+b)
+//     {
+//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
+//     if(totalb == 0){
+//         bingo +=1;
+//         break;
+//     }
+//     }
+//     b++;
+//     }
+// for(i=0;i<25;i++){
+//     if(i%5 == 0+b)
+//     {
+//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
+//     if(totalb == 0){
+//         bingo +=1;
+//         break;
+//     }
+//     }
+//     }
 //대각선줄
+// var totalc = 0;
+// var totald = 0;
+// for(i=0;i<25;i++){
+//     if(i%6 == 0)
+//     {
+//         totalc += board[i];
+//         if(totalc == 0){
+//             if(i == 24){
+//                 bingo+=1;
+//             }
+//         }
+//     }
+//     if(i%4 == 0){
+//         totald += board[i];
+//         if(totald == 0){
+//             if(i == 20){
+//                 bingo+=1;
+//             }
+//         }    
+//         }
+//     }
 
 
 
 //결과 출력
-if(binggo => 1){
-    document.write(`${binggo} 빙고`)
+const modal = document.getElementById("result_modal");
+if(bingo == 5){
+    modal.style.display = "block";
+    $(".result").html("성공");
+}else if(bingo >= 6){
+    modal.style.display = "block";
+    $(".result").html("실패");
 }
+
+}
+// const modal = document.getElementById("modal");
+// const openModalBtn = document.getElementById("open-modal");
+// const closeModalBtn = document.getElementById("close-modal");
+
+//모달창 열기
+// openModalBtn.addEventListener("click", () => {
+//     modal.style.display = "block";
+//     document.body.style.overflow = "hidden";
+// });
+
+//모달창 닫기
+// closeModalBtn.addEventListener("click", () => {
+//     modal.style.display = "none";
+//     document.body.style.overflow = "auto";
+// });
 
 
 
@@ -102,4 +191,3 @@ if(binggo => 1){
     idx/6 = 0
     idx/4 = 0 && idx < 24
     */
-}

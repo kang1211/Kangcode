@@ -54,7 +54,22 @@
 
 /*---------------------------------------*/
 #result_modal{
+    position : fixed;
+    z-index : 1;
+    left:0;
+    top:0;
+    width:20%;
+    height:20%;
+    overflow:auto;
+    background-color:aquamarine;
     display:none;
+}
+.result_detail{
+    background-color:blue;
+    margin:15% auto;
+    padding:20px;
+    border: 1px solid #888;
+    width:80%;
 }
 
 /*---------------------------------------*/
