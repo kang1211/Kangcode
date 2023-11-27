@@ -36,7 +36,7 @@ var bingo = 0;
 // var totala = 0;
 // var a = 0;
 // var k = 0;
-// for(i=0+a;i<25;i++){
+// for(i=0+a;i<board.length;i++){
 //     totala += board[i];
 //     if(i == 4+a)
 //     {
@@ -51,28 +51,27 @@ var bingo = 0;
 //세로줄
 var b = 0;
 var totalb = 0;
+for(i=0;i<5;i++){
+    for(var k=0;k<5;k++){
+        if(board[k][i]==0){
+            bingo+=1;
+        }else{break;}
+    }
+}
+    
 // for(i=0;i<5;i++){
-//     for(var k=0; k<5;k++){
-//         totalb += board[i][b]
-//         if(totalb == 0){
-//             bingo+=1;
-//         }
-//         b++;
+//     var check=false;
+//     for(var k=0;k<5;k++){
+//         if(board[k][i] == 0){
+//             console.log(board[k][i]);
+//             check = true;
+//         }else{
+//             check=false;
+//             break;
 //         }
 //     }
-for(i=0;i<board[0].length;i++){
-    var check=false;
-    for(var k=0;k<board[i].length;k++){
-        if(board[k][i] == 0){
-            check = true;
-            console.log(board[i][k]);
-        }else{
-            check=false;
-            break;
-        }
-    }
-    if(check) bingo++;
-}
+//     if(check) bingo++;
+// }
 
 
 // for(i=0;i<25;i++){
@@ -121,7 +120,7 @@ for(i=0;i<board[0].length;i++){
 //대각선줄
 // var totalc = 0;
 // var totald = 0;
-// for(i=0;i<25;i++){
+// for(i=0;i<board.length;i++){
 //     if(i%6 == 0)
 //     {
 //         totalc += board[i];
