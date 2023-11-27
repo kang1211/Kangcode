@@ -60,12 +60,20 @@ var totalb = 0;
 //         b++;
 //         }
 //     }
-for(i=0;i<25;i++){
-    if(i%5 == b){
-    totalb = board[0+b]+board[5+b]+board[10+b]+board[15+b]+board[20+b];
-    if(totalb == 0){bingo++;break;continue;}
-    }b++; 
+for(i=0;i<board[0].length;i++){
+    var check=false;
+    for(var k=0;k<board[i].length;k++){
+        if(board[k][i] == 0){
+            check = true;
+            console.log(board[i][k]);
+        }else{
+            check=false;
+            break;
+        }
+    }
+    if(check) bingo++;
 }
+
 
 // for(i=0;i<25;i++){
 //     if(i%5 == 0+b)
