@@ -14,6 +14,11 @@ var v=board[i];
 
 
 $(function(){
+
+    $(".modal_bg").on("click",function(){
+        $("#result_modal").hide();
+    });
+
     $.each(board, function(i,v){ // i-인덱스, v-배열값
         $(".numBox").eq(i).text(v);
     });
@@ -29,128 +34,98 @@ $(function(){
 });
 
 
-function endgame()
-{
-var bingo = 0;
-//가로줄
-// var totala = 0;
-// var a = 0;
-// var k = 0;
-// for(i=0+a;i<board.length;i++){
-//     totala += board[i];
-//     if(i == 4+a)
-//     {
-//         if(totala == 0)
-//         {
-//             bingo +=1;
-//         }
-//         a += 5;
-//         totala = 0;
-//     };  
-// }
-//세로줄
-var b = 0;
-var totalb = 0;
-for(i=0;i<5;i++){
+function endgame(){
+// 선생님이 작성하신 코드
+var row=0, col=0, end=0, cross=[0,0];
+for(var i=0;i<5 ;i++){ //빙고 확인하기
     for(var k=0;k<5;k++){
-        if(board[k][i]==0){
-            bingo+=1;
-        }else{break;}
+        if(board[i*5+k]==0)row++; //가로방향 5줄 전부확인
+        if(board[k*5+i]==0)col++; //세로방향 5열 전부확인
     }
+    if(board[i*6]==0) cross[0]++; //왼->오 대각선
+    if(board[(i+1)*4 == 0]) cross[1]++; //오->왼 대각선
+
+    if(cross[1]==5)end++;
+    if(cross[0]==5)end++;
+    if(row==5)end++;
+    if(col==5)end++;
+
+    row=0; //한줄씩 확인할 때마다 0개부터 확인해야 하므로 초기화
+    col=0; //1열씩 확인할 때마다 0개부터 확인해야 하므로 초기화
 }
-    
-// for(i=0;i<5;i++){
-//     var check=false;
+
+if(end==5){ // 5줄 빙고 완성
+    $("#result_modal").show(); // $("#result_modal").css("display","block")
+    $(".result").text("5줄 빙고 완성");
+}else if(end>=6){//빙고 실패
+    $("#result_modal").show(); 
+    $(".result").text("5줄 빙고 실패");
+}
+
+// 보고 참고해서 직접 작성한 코드    
+// var bingo = 0;
+// //가로줄
+// // var totala = 0;
+// // var a = 0;
+// // var k = 0;
+// // for(i=0+a;i<board.length;i++){
+// //     totala += board[i];
+// //     if(i == 4+a)
+// //     {
+// //         if(totala == 0)
+// //         {
+// //             bingo +=1;
+// //         }
+// //         a += 5;
+// //         totala = 0;
+// //     };  
+// // }
+
+// 세로줄
+// var col = 0;
+// for(var i=0;i<5;i++){
 //     for(var k=0;k<5;k++){
-//         if(board[k][i] == 0){
-//             console.log(board[k][i]);
-//             check = true;
-//         }else{
-//             check=false;
-//             break;
+//         if(board[k*5+i]==0)col++;
 //         }
-//     }
-//     if(check) bingo++;
+//     if(col==5)bingo++;
+        
+//     col=0;
 // }
 
+    
 
-// for(i=0;i<25;i++){
-//     if(i%5 == 0+b)
-//     {
-//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
-//     if(totalb == 0){
-//         bingo +=1;
-//         break;
-//     }
-//     }
-//     b++;
-//     }
-// for(i=0;i<25;i++){
-//     if(i%5 == 0+b)
-//     {
-//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
-//     if(totalb == 0){
-//         bingo +=1;
-//         break;
-//     }
-//     }
-//     b++;
-//     }
-// for(i=0;i<25;i++){
-//     if(i%5 == 0+b)
-//     {
-//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
-//     if(totalb == 0){
-//         bingo +=1;
-//         break;
-//     }
-//     }
-//     b++;
-//     }
-// for(i=0;i<25;i++){
-//     if(i%5 == 0+b)
-//     {
-//     totalb = board[0]+board[5]+board[10]+board[15]+board[20];
-//     if(totalb == 0){
-//         bingo +=1;
-//         break;
-//     }
-//     }
-//     }
-//대각선줄
-// var totalc = 0;
-// var totald = 0;
-// for(i=0;i<board.length;i++){
-//     if(i%6 == 0)
-//     {
-//         totalc += board[i];
-//         if(totalc == 0){
-//             if(i == 24){
-//                 bingo+=1;
-//             }
-//         }
-//     }
-//     if(i%4 == 0){
-//         totald += board[i];
-//         if(totald == 0){
-//             if(i == 20){
-//                 bingo+=1;
-//             }
-//         }    
-//         }
-//     }
+// //대각선줄
+// // var totalc = 0;
+// // var totald = 0;
+// // for(i=0;i<board.length;i++){
+// //     if(i%6 == 0)
+// //     {
+// //         totalc += board[i];
+// //         if(totalc == 0){
+// //             if(i == 24){
+// //                 bingo+=1;
+// //             }
+// //         }
+// //     }
+// //     if(i%4 == 0){
+// //         totald += board[i];
+// //         if(totald == 0){
+// //             if(i == 20){
+// //                 bingo+=1;
+// //             }
+// //         }    
+// //         }
+// //     }
 
-
-
-//결과 출력
-const modal = document.getElementById("result_modal");
-if(bingo == 5){
-    modal.style.display = "block";
-    $(".result").html("성공");
-}else if(bingo >= 6){
-    modal.style.display = "block";
-    $(".result").html("실패");
-}
+// //결과 출력
+// const modal = document.getElementById("result_modal");
+// if(bingo == 5){
+//     modal.style.display = "block";
+//     $(".result").html("성공");
+// }else if(bingo >= 6){
+//     modal.style.display = "block";
+//     $(".result").html("실패");
+// }
 
 }
 // const modal = document.getElementById("modal");
@@ -168,7 +143,6 @@ if(bingo == 5){
 //     modal.style.display = "none";
 //     document.body.style.overflow = "auto";
 // });
-
 
 
 //가로줄   

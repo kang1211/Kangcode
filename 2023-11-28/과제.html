@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #loading{
+            border-radius:100%;
+            background:black;
+            width:280px;
+            height:280px;
+            border: 40px solid salmon;
+            animation : loading 3s infinite;
+        }
+
+        @keyframes loading{
+            0%{width:200px;height:200px;}
+            50%{width:100px;height:200px;border-radius:0 100px 100px 0;background:white;}
+            100%{width:200px;height:200px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="loading"></div>
+</body>
+</html>
