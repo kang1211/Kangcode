@@ -12,32 +12,37 @@
         #back{
             position:absolute;
             width:200px;height:200px;
-            background:blueviolet;
+            background:gray;
             border-radius:100%;
             
         }
         #loading{
             position:absolute;
-            /* border-radius:100%; */
-            /* border-top-left-radius:100%; */
-            /* border-top-right-radius:100%; */
-            /* border-bottom-right-radius:100%; */
-            /* border-bottom-left-radius:100%; */
-            animation: loading 10s infinite;
+            /* width:200px; height:100px;border-radius:100px 100px 0 0;top:0; left:0px;background:black;rotate:0deg;
+            width:100px; height:200px;border-radius:0 100px 100px 0;left:100px;top:0;background:black;rotate:90deg;
+            width:200px; height:100px;border-radius:0 0 100px 100px;top:100px; left:0px;background:black;rotate:270deg;
+            width:100px; height:200px;border-radius:100px 0 0 100px;top:0; left:0px;background:black;rotate:360deg; */
+            animation: loading 5s infinite;
             z-index:999;
         }
 
         @keyframes loading{
-            /* 0%{width:100px; height:100px; border-top-right-radius:100%;left:100px;top:0;background:black} */
-            /* 25%{width:100px; height:100px; border-bottom-right-radius:100%;left:100px;top:100px;background:black} */
-            /* 50%{width:100px; height:100px; border-bottom-left-radius:100%;left:0;top:100px;background:black} */
-            /* 75%{width:100px; height:100px; border-top-left-radius:100%;left:0;top:0;background:black} */
-            /* 100%{width:200px; height:200px; border-radius:100%;left:0;top:0;background:black} */
-            0%{width:200px; height:100px;border-radius:100px 100px 0 0;top:0; left:0px;background:black}
-            25%{width:100px; height:200px;border-radius:0 100px 100px 0;left:100px;top:0;background:black}
-            50%{width:200px; height:100px;border-radius:0 0 100px 100px;top:100px; left:0px;background:black}
-            75%{width:100px; height:200px;border-radius:100px 0 0 100px;top:0; left:0px;background:black}
-            100%{width:200px; height:100px;border-radius:100px 100px 0 0;top:0; left:0px;background:black}
+            0%{width:100px; height:100px; border-top-right-radius:100%;left:100px;top:0;background:black;}
+            25%{width:100px; height:100px; border-top-right-radius:100%;left:100px;top:100px;background:black;rotate:90deg;}
+            50%{width:100px; height:100px; border-top-right-radius:100%;left:0;top:100px;background:black;rotate:180deg;}
+            75%{width:100px; height:100px; border-top-right-radius:100%;left:0;top:0;background:black;rotate:270deg;}
+            100%{width:100px; height:100px; border-top-right-radius:100%;left:100px;top:0;background:black;rotate:360deg;}
+            
+            
+            /* 0%{width:200px; height:100px;border-radius:100px 100px 0 0;top:0; left:0px;background:black;rotate:0deg;}
+            25%{width:200px; height:100px;border-radius:100px 100px 0 0;top:50px; left:100px;background:black;rotate:90deg;}
+            50%{width:200px; height:100px;border-radius:100px 100px 0 0;top:100px; left:0px;background:black;rotate:180deg;}
+            75%{width:200px; height:100px;border-radius:100px 100px 0 0;top:50px; left:0px;background:black;rotate:270deg;}
+            100%{width:200px; height:200px;border-radius:100%;background:black;rotate:360deg;} */
+            /* 25%{width:200px; height:100px;border-radius:0 0 100px 100px;top:100px; left:0px;background:black;rotate:90deg;}
+            50%{width:100px; height:200px;border-radius:0 100px 100px 0;left:100px;top:0;background:black;rotate:180deg;}
+            75%{width:100px; height:200px;border-radius:100px 0 0 100px;top:0; left:0px;background:black;rotate:270deg;} */
+            
         }
     </style>
 </head>
