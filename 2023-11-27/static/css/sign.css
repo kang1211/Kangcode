@@ -25,7 +25,6 @@
 .input_field input{
      width:200px;     /*calc( 100% - 145px ); */
      padding:7px 10px;
-
      font-size:30px;
 }
 /* email input 태그만 선택
