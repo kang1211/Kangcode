@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container1{
+            display:grid;
+            grid-template-columns:repeat(4/1fr);
+            grid-auto-rows:80px;
+            gap:10px;
+            width:500px;
+        }
+        .item:nth-child(1){
+            grid-column:1/2;
+            grid-row:1/5;
+        }
+        .item:nth-child(2){
+            grid-column:2/3;
+            grid-row:1/2;
+        }
+        .item:nth-child(3){
+            grid-column:3/4;
+            grid-row:1/2;
+        }
+        .item:nth-child(4){
+            grid-column:4/5;
+            grid-row:1/2;
+        }
+        .item:nth-child(5){
+            grid-column:3/5;
+            grid-row:2/4;
+        }
+        .item:nth-child(8){
+            grid-column:2/5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div class="item" style="background:rgb(255, 166, 0)">1</div>
+        <div class="item" style="background:saddlebrown">2</div>
+        <div class="item" style="background:aqua">3</div>
+        <div class="item" style="background:rgb(7, 165, 131)">4</div>
+        <div class="item" style="background:rebeccapurple">5</div>
+        <div class="item" style="background:rgb(208, 241, 86)">6</div>
+        <div class="item" style="background:fuchsia">7</div>
+        <div class="item" style="background:fuchsia">8</div>
+    </div>
+</body>
+</html>

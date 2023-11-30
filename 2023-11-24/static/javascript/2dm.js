@@ -22,7 +22,7 @@ $(function(){
         board.push(tmp);
     }
     
-    for(var i=0;i<board.length;i++){
+    for(var i=0;i<2;i++){
         for(var k=0;k<board[i].length;k++){
         $(".pic").eq(i*board[i].length+k).
         find("img").attr("src", "./static/images/"+image[board[i][k]]);
