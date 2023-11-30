@@ -3,10 +3,12 @@
     margin:0;
     box-sizing:border-box;
 }
+
+html{font-size:10px;}
 ul{list-style-type:none;}
 img{width:100%;}
 #wrap{
-    width:100%;
+    width:90%;
     min-width:315px;
     margin:0 auto;
 }
@@ -14,8 +16,9 @@ img{width:100%;}
     width:100%;
     padding:10px 0;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items:center;
+    font-size:30px;
 }
 .pc_search{
     display:none;
@@ -29,3 +32,110 @@ img{width:100%;}
 }
 .mobile_menu{font-size:2rem;}
 .mobile_search{font-size:2em;}
+
+#main{
+    width:100%;
+    padding:50px 0;
+    background:teal;
+}
+.content{
+    width:100%;
+    padding:0 10%;
+}
+.item{
+    margin-top:20px;
+}
+#footer{
+    width:100%;
+    background:sandybrown;
+    padding:50px;
+    position:relative;
+}
+
+.addr, .tel{
+    height:2rem;
+    background:skyblue;
+    width:60%;
+    position:relative;
+    left:40%;
+}
+#footer .logo{
+    height:4rem;
+    width:4rem;
+    background:black;
+    position:absolute;
+    top:50px;
+}
+
+/* 태블릿용 */
+@media screen and (min-width:768px){
+    html{font-size:15px;}
+    #header{font-size:20px;}
+    .content{
+        display:flex;
+        flex-wrap:wrap;
+        padding:0;
+        justify-content:center;
+        gap:20px;
+    }
+    .item{
+        margin:0;
+        width:45%;
+    }
+}
+
+/* pc용 */
+@media screen and (min-width:1024px){
+    .mobile_menu, .mobile_search{
+        display:none;
+    }
+    .pc_search, #nav{
+        display:block;
+        width:35%;
+    }
+    .pc_search input{
+        height:30px;
+        padding-left:8px;
+        font-size:1.5em;
+        width:8em;
+    }
+    #nav ul{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .menu{
+        width:70px;
+        height:25px;
+    }
+
+    /*
+    이미지 배치 - 한줄에 3장, 이미지사이 간격은 25px
+    footer 
+    - addr, tel 을 한줄에 배치, footer기준 왼쪽에 배치
+    - logo는 addr,tel 밑에 배치, 이전 크기대비 1.5배사이즈업
+    */
+    .content{
+    gap:25px;
+    }
+    .item{
+        width:30%;
+    }
+    #wrap{
+        max-width:1400px;
+    }
+    .addr, .tel{
+        width:50%;
+        left:0%;
+    }
+    #footer{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    #footer .logo{
+        width:6rem;
+        height:6rem;
+        position:static;
+        top:0;
+    }
+}

@@ -1,0 +1,54 @@
+<!--gril.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+        grid
+            부모태그 : grid 컨테이너
+            자식태그 : grid 아이템
+            그리드 트랙 : 행 또는 열
+            그리드 셀 ㅣ 그리드 영역 안에 한칸 한칸의 공간
+            그리드 라인 : 그리드 셀을 구분하는 선
+            그리드 번호 : 그리드 라인을 구분하는 번호
+            그리드 갭 : 셀 사이 간격
+            그리드 영역 : 그리드 라인으로 구성된 영역
+
+            flex에서
+                justify -> 컨테이너
+                align -> 아이템
+            grid속성
+                행 : grid-template-rows
+                열 : grid-template-columns
+            fr을 사용할때에는 높이나 가로 너비를 주고 사용해야 한다
+    -->
+    <style>
+        #container{
+            width:100%;
+            display:grid;
+            /* grid-template-columns:100px 100px 100px 100px 100px; */
+            /* grid-template-columns:repeat(5,1fr); fration */
+            /* grid-template-columns: 200px 1fr 2fr 3fr 1fr; 1/8, 1/8, 2/8, 3/8, 1/8 */
+            /* repeat(반복횟수, 크기),fr은 fraction(분수, 비율, 등분) */
+            /* grid-template-columns: 100px repeat(3,1fr) 1fr; */
+
+            grid-template-columns:repeat(5, minmax(200px, 400px));
+            grid-template-rows:minmax(50px, auto) 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item" style="background:red">1<br>1<br>1<br>1<br>1<br>1</div>
+        <div class="item" style="background:saddlebrown">2</div>
+        <div class="item" style="background:aqua">3</div>
+        <div class="item" style="background:whitesmoke">4</div>
+        <div class="item" style="background:rebeccapurple">5</div>
+        <div class="item" style="background:seagreen">6</div>
+        <div class="item" style="background:fuchsia">7</div>
+    </div>
+</body>
+</html>
