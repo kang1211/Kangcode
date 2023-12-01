@@ -11,34 +11,55 @@
             grid-auto-rows:80px;
             gap:10px;
             width:500px;
+            border:2px solid black;
+            padding:10px;
         }
-        .item:nth-child(1){
+        #container1 .item:nth-child(1){
             grid-column:1/2;
             grid-row:1/5;
         }
-        .item:nth-child(2){
-            grid-column:2/3;
-            grid-row:1/2;
-        }
-        .item:nth-child(3){
-            grid-column:3/4;
-            grid-row:1/2;
-        }
-        .item:nth-child(4){
-            grid-column:4/5;
-            grid-row:1/2;
-        }
-        .item:nth-child(5){
+        #container1 .item:nth-child(5){
             grid-column:3/5;
             grid-row:2/4;
         }
-        .item:nth-child(8){
+        #container1 .item:nth-child(8){
             grid-column:2/5;
         }
+        #container2{
+            display:grid;
+            width:500px;
+            grid-auto-rows:80px;
+            gap:10px;
+            grid-template-areas:
+            " a b c d"
+            " a f e e"
+            " a g e e"
+            " a h h h";
+            padding:10px;
+            border:2px solid black;
+        }
+        #container2 .item:nth-child(1){grid-area:a}
+        #container2 .item:nth-child(2){grid-area:b}
+        #container2 .item:nth-child(3){grid-area:c}
+        #container2 .item:nth-child(4){grid-area:d}
+        #container2 .item:nth-child(5){grid-area:e}
+        #container2 .item:nth-child(6){grid-area:f}
+        #container2 .item:nth-child(7){grid-area:g}
+        #container2 .item:nth-child(8){grid-area:h}
     </style>
 </head>
 <body>
     <div id="container1">
+        <div class="item" style="background:rgb(255, 166, 0)">1</div>
+        <div class="item" style="background:saddlebrown">2</div>
+        <div class="item" style="background:aqua">3</div>
+        <div class="item" style="background:rgb(7, 165, 131)">4</div>
+        <div class="item" style="background:rebeccapurple">5</div>
+        <div class="item" style="background:rgb(208, 241, 86)">6</div>
+        <div class="item" style="background:fuchsia">7</div>
+        <div class="item" style="background:fuchsia">8</div>
+    </div>
+    <div id="container2">
         <div class="item" style="background:rgb(255, 166, 0)">1</div>
         <div class="item" style="background:saddlebrown">2</div>
         <div class="item" style="background:aqua">3</div>
