@@ -1,0 +1,48 @@
+#freeTalk{width:100%;
+}
+#searchBar{
+    width:100%;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#barBox{
+    height:50px;
+    display:flex;
+    border:2px solid #FFBB00;
+}
+#barBox p, #barBox .a{
+    padding: 10px 20px;
+    background:#FFBB00;
+    color:black;
+}
+#barBox p, #searchContent{
+    border-right: 1px solid black;
+}
+#barBox .a{
+    cursor:pointer;
+}
+
+/* 글상자 */
+#board{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+#board table{
+    width:900px;
+    background-color:gray;
+    color:black;
+    border: 5px solid black;
+    margin-bottom: 50px;
+    table-layout:fixed;
+}
+#board table th{
+    border: 2px solid black;
+}
+#board table td{
+    border: 1px solid black;
+    word-break:break-all;
+    height:auto;
+}
