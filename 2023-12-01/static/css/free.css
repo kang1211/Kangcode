@@ -17,7 +17,7 @@
     background:#FFBB00;
     color:black;
 }
-#barBox p, #searchContent{
+#barBox p, #search{
     border-right: 1px solid black;
 }
 #barBox .a{
@@ -39,10 +39,19 @@
     table-layout:fixed;
 }
 #board table th{
-    border: 2px solid black;
+    border: 3px solid black;
 }
 #board table td{
-    border: 1px solid black;
-    word-break:break-all;
+    outline: 1px dashed black;
+    word-break:break-word;
     height:auto;
+    padding:10px;
+}
+#board table td:nth-child(2){
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    text-align:left;
 }

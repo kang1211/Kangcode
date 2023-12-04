@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <script>
+        //민수가 혈당을 체크하였다.
+        // 혈당수치에 따라 구분하여 출력하시오
+        // 70~100일 경우 공복혈당
+        // 90~140일경우 식후2시간 혈당
+        // 정상혈당 수치는 70~100, 90~140이다. 정상수치보다 5.7%미만이면
+        // 당화혈색소라고 출력
+        // input태그 값 가져오는 함수, 수치에따라 결과 출력하는 함수
+
+        // 종우가 비만도 측정을 하였다.
+        // 비만도 BMI지수 계산은 몸무게/((키/100)*(키/100))
+        // BMI 지수가 18.5 이하면 저체중
+        // 18.5~22.9 사이면 정상
+        // 23.0~24.9 사이면 과체중
+        // 25이상은 비만
+
+        function push(){
+            var k = Number($("#Minsu").val());
+            if(k>=70 && k<=100){
+                var a="공복혈당"
+            }else if(k<70 - 70*(0.057)){
+                var a="당화혈색소"
+            }else{
+                var a="다시입력하세요"
+            }
+
+            if(k>=90 && k<=140){
+                var b = "식후2시간 혈당"
+            }else if(k<90 - 90*(0.057)){
+                var b = "당화혈색소"
+            }else{
+                var b = "다시입력하세요"
+            }
+
+            var result = (`${a}, ${b}`);
+            document.getElementById("res").innerHTML = result;
+        };
+
+        function BMI(){
+            var kg = Number($("#kg").val());
+            var m = parseInt($("#m").val());
+            var result = kg/((m/100)*(m/100));
+            if(result<=18.5){
+                document.getElementById("res2").innerHTML = "저체중";
+            }else if(result<=22.9){
+                document.getElementById("res2").innerHTML = "정상체중";
+            }else if(result<=24.9){
+                document.getElementById("res2").innerHTML = "과체중";
+            }else{
+                document.getElementById("res2").innerHTML = "비만";
+            }
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="Minsu">혈당수치 입력
+    <button onclick="push()">혈당체크</button>
+    <div id="res"></div>
+    <br><br>
+    <input type="text" id="kg">몸무게
+    <input type="text" id="m">키
+    <button onclick="BMI()">BMI지수측정</button>
+    <div id="res2"></div>
+</body>
+</html>
