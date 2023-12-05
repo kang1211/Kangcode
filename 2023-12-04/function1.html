@@ -60,9 +60,66 @@ console.log(res);
 function indexof(data){
     return 11;
 }
+// 함수가 가진 데이터를 함수 밖으로 보내는 방법
+// return 을 활용하여 반환값 처리 하기
+// 전역변수를 사용;
+
+let result=0; //전역변수
+
+function plus(num1, num2, num3){ //함수 정의
+    result = num1+num2+num3;
+}
+
+function prints(){
+    document.getElementById("res").innerHTML = result;
+}
+
+
+$(function(){ //window.onload=function(){} - html문서가 브라우저에 모두 로드되면
+
+});
+
+function avg(){
+
+    var k = parseInt(document.getElementById("num1").value);
+    var m = parseInt($("#num2").val());
+    var e = parseInt(document.querySelector("#num3").value);
+    
+    total(k,m,e);
+
+    var average=total/3;
+}
+function total(a, b, c){
+    return (a+b+c)
+}
+
+function dan(end){
+    var num = parseInt($("#gugu").val());
+    // var num = Number($("#gugu").val());
+    for(var i=1;i<=end;i++){
+        $("#gugudan").append(`${num} * ${i} = ${num*i} <br>`);
+    }
+    // document.getElementById("gugudan").innerHTML = result;
+}
 </script>
 </head>
 <body>
-    
+    <button onclick="plus(10, 20, 30)">함수 실행</button>
+    <button onclick="prints()">결과출력</button>
+    <div id="res"></div>
+
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3"> <br>
+
+    <button onclick="avg()">성적 평균 계산</button>
+
+    <br><br>
+<!-- input#gugu 입력한 숫자에 맞는 구구단 출력 하는 함수 만들기
+    매개 변수 숫자 까지의 구구단만 출력
+-->
+    <input type="text" id="gugu">
+    <button onclick="dan(7)">구구단 출력</button>
+    <div id="gugudan"></div>
 </body>
 </html>

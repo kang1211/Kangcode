@@ -1,0 +1,124 @@
+<!--
+    과제
+        가위 바위 보.
+        image는 이전에 사용했던 이미지 사용
+        컴퓨터와 대결 구도를 갖춘 가위바위보 만들기
+        화면의 왼쪽에는 컴퓨터 가위바위보 이미지 0.3초 간격으로 바뀌기
+        화면의 오른쪽에는 내꺼 가위바위보 이미지 3장 넣기
+        내가 가위바위보 이미지를 클릭하면 컴퓨터의 이미지도 멈추고
+        결과를 화면 중앙에 표시 setInterval 사용 clearInterval 사용
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>컴퓨터랑 가위바위보</title>
+<style>
+    *{
+        box-sizing:border-box;
+    }
+    #wrap{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    #com{
+        width:50%;
+        outline: 1px solid black;
+        height:500px;
+        position:relative;
+    }
+    #me{
+        width:50%;
+        outline: 1px solid black;
+        height:500px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    #result{
+        width:100%;
+        height:400px;
+        outline: 1px solid black;
+        display:flex;
+        justify-content:center;
+        /* align-items:center; */
+    }
+    .img{
+        width:200px;
+        height:200px;
+        border-radius:100%;
+        border:1px solid red;
+        padding:10px;
+        margin:10px;
+    }
+    .cimg{
+        width:200px;
+        height:200px;
+        border-radius:100%;
+        border:1px solid red;
+        padding:10px;
+        position:absolute;
+    }
+    #set{
+        width:100%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    #start{
+        width:100px;
+        height:50px;
+    }
+</style>
+
+
+<script>
+
+$("#start").on("click",function(){
+    setInterval(change,300);
+});
+
+
+
+$(function(){
+for(i=1;i<4;i++){
+    if()
+}
+
+});
+
+
+</script>
+
+
+</head>
+<body>
+    <div id="wrap">
+        
+        <div id="com">
+            <div id="set">
+                <img id= "paper" class="cimg"  src="./static/images/paper.png">
+                <img id= "rock"class="cimg" src="./static/images/rock.png">
+                <img id= "scissors"class="cimg" src="./static/images/scissors.png">
+            </div>
+        </div>
+
+        
+        <div id="me">
+            <img class="img" src="./static/images/paper.png">
+            <img class="img" src="./static/images/rock.png">
+            <img class="img" src="./static/images/scissors.png">
+        </div>
+    </div>
+    
+    <div id="result">
+        <button id="start">게임시작</button>
+    </div>
+</body>
+</html>

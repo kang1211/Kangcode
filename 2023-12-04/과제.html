@@ -23,7 +23,7 @@
         // 25이상은 비만
 
         function push(){
-            var k = Number($("#Minsu").val());
+            var k = data();
             if(k>=70 && k<=100){
                 var a="공복혈당"
             }else if(k<70 - 70*(0.057)){
@@ -41,21 +41,32 @@
             }
 
             var result = (`${a}, ${b}`);
-            document.getElementById("res").innerHTML = result;
+            return k;
+            $("#res").text(result);
+            
+            // document.getElementById("res").innerHTML = result;
         };
+        function data(){
+            var k = Number($("#Minsu").val());
+            return k;
+        }
 
         function BMI(){
             var kg = Number($("#kg").val());
             var m = parseInt($("#m").val());
             var result = kg/((m/100)*(m/100));
             if(result<=18.5){
-                document.getElementById("res2").innerHTML = "저체중";
+                // document.getElementById("res2").innerHTML = "저체중";
+                $("#res2").text(result);
             }else if(result<=22.9){
-                document.getElementById("res2").innerHTML = "정상체중";
+                // document.getElementById("res2").innerHTML = "정상체중";
+                $("#res2").text(result);
             }else if(result<=24.9){
-                document.getElementById("res2").innerHTML = "과체중";
+                // document.getElementById("res2").innerHTML = "과체중";
+                $("#res2").text(result);
             }else{
-                document.getElementById("res2").innerHTML = "비만";
+                // document.getElementById("res2").innerHTML = "비만";
+                $("#res2").text(result);
             }
         };
     </script>
