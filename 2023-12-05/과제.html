@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title>컴퓨터랑 가위바위보</title>
+    <title>가위바위보 게임</title>
 <style>
     *{
         box-sizing:border-box;
@@ -63,6 +63,7 @@
         border:1px solid red;
         padding:10px;
         position:absolute;
+        /* visibility:hidden; */
     }
     #set{
         width:100%;
@@ -80,19 +81,17 @@
 
 <script>
 
+let imgArray= new Array();
+imgArray[0]="./static/images/paper.png";
+imgArray[1]="./static/images/rock.png";
+imgArray[2]="./static/images/scissors.png";
+
+var a;
+
 $("#start").on("click",function(){
-    setInterval(change,300);
+    a = Math.floor(Math.random()*3);
+    $("#set").innerHTML=`<img id= "paper" class="cimg" src="${imgArray[a]}">`;
 });
-
-
-
-$(function(){
-for(i=1;i<4;i++){
-    if()
-}
-
-});
-
 
 </script>
 
@@ -103,17 +102,17 @@ for(i=1;i<4;i++){
         
         <div id="com">
             <div id="set">
-                <img id= "paper" class="cimg"  src="./static/images/paper.png">
+                <!-- <img id= "paper" class="cimg" src="./static/images/rock.png">
                 <img id= "rock"class="cimg" src="./static/images/rock.png">
-                <img id= "scissors"class="cimg" src="./static/images/scissors.png">
+                <img id= "scissors"class="cimg" src="./static/images/scissors.png"> -->
             </div>
         </div>
 
         
         <div id="me">
-            <img class="img" src="./static/images/paper.png">
-            <img class="img" src="./static/images/rock.png">
-            <img class="img" src="./static/images/scissors.png">
+            <button><img class="img" src="./static/images/paper.png"></button>
+            <button><img class="img" src="./static/images/rock.png"></button>
+            <button><img class="img" src="./static/images/scissors.png"></button>
         </div>
     </div>
     
