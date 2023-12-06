@@ -56,7 +56,7 @@
         padding:10px;
         margin:10px;
     }
-    .cimg{
+    #comImg{
         width:200px;
         height:200px;
         border-radius:100%;
@@ -82,15 +82,65 @@
 <script>
 
 let imgArray= new Array();
+// imgArray[0]="./static/images/paper.png";
+// imgArray[1]="./static/images/rock.png";
+// imgArray[2]="./static/images/scissors.png";
+
 imgArray[0]="./static/images/paper.png";
 imgArray[1]="./static/images/rock.png";
 imgArray[2]="./static/images/scissors.png";
 
-var a;
+var a = '';
+let paper = $("#paper");
+let rock = $("#rock");
+let scissors = $("#scissors");
+let result = $("#result");
+
+
+
+$(function(){
+    function changeDisplay(){
+    a = Math.floor(Math.random()*3);
+    $("#comImg").attr("src",imgArray[a]);
+}
+$("#comImg").attr("src",imgArray[0]);
 
 $("#start").on("click",function(){
-    a = Math.floor(Math.random()*3);
-    $("#set").innerHTML=`<img id= "paper" class="cimg" src="${imgArray[a]}">`;
+    setInterval(changeDisplay,100);
+});
+
+paper.onclick(){
+    clearInterval();
+    if(a==0){
+        result.after("비김")
+    }else if(a==1){
+        result.after("이김")
+    }else{
+        result.after("짐")
+    }
+};
+
+rock.onclick(){
+    clearInterval();
+    if(a==0){
+        result.after("짐")
+    }else if(a==1){
+        result.after("비김")
+    }else{
+        result.after("이김")
+    }
+};
+
+scissors.onclick(){
+    clearInterval();
+    if(a==0){
+        result.after("이김")
+    }else if(a==1){
+        result.after("짐")
+    }else{
+        result.after("비김")
+    }
+};
 });
 
 </script>
@@ -102,17 +152,18 @@ $("#start").on("click",function(){
         
         <div id="com">
             <div id="set">
-                <!-- <img id= "paper" class="cimg" src="./static/images/rock.png">
-                <img id= "rock"class="cimg" src="./static/images/rock.png">
-                <img id= "scissors"class="cimg" src="./static/images/scissors.png"> -->
+                <img id="comImg">
+                <!-- <img class="cimg" src="./static/images/paper.png">
+                <img class="cimg" src="./static/images/rock.png">
+                <img class="cimg" src="./static/images/scissors.png"> -->
             </div>
         </div>
 
         
         <div id="me">
-            <button><img class="img" src="./static/images/paper.png"></button>
-            <button><img class="img" src="./static/images/rock.png"></button>
-            <button><img class="img" src="./static/images/scissors.png"></button>
+            <button><img id="paper"    class="img" src="./static/images/paper.png"></button>
+            <button><img id="rock"     class="img" src="./static/images/rock.png"></button>
+            <button><img id="scissors" class="img" src="./static/images/scissors.png"></button>
         </div>
     </div>
     
