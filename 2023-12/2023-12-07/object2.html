@@ -37,10 +37,12 @@ function dog(){ // 객체생성자 함수
     this.품종 = 품종;
     this.크기 = 크기;
     this.특징 = 특징;
-}
-dog.prototype.view=function(){
-    document.write(this.품종+" "+this.크기+" "+this.특징);
-}
+};
+// dog.prototype.view=function(){
+//     document.write(this.품종+" "+this.크기+" "+this.특징);
+// }
+// dog.prototype.종="개";
+
 
 var d1 = new dog("말티즈","소형","장난끼"); // 생성자함수를 통해 객체 생성
 var d2 = new dog("먹푸들","중형","똑똑이");
@@ -48,7 +50,7 @@ var d3 = new dog("진돗개","중형","순종");
 
 // alert(d1.품종);  // 연산자 순위(), [], ., ->
 // alert(d1['크기']); 
-d1.view();
+d1.show();
 d2.view();
 d3.view();
 
