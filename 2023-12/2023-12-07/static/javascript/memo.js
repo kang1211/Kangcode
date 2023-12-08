@@ -12,7 +12,7 @@ memo.prototype.create = function(i){
             <b>${this.num}</b>
             <h3>${this.content}</h3>
             <div style='width:70px;background:${this.importance.color}'>${this.importance.text}</div>
-            <div class='del' onclick='del_memo(${i})><i class="bi bi-file-earmark-x"></i></div>
+            <div class='del'><i class="bi bi-file-earmark-x"></i></div>
     </div>`
 }
 
@@ -74,25 +74,27 @@ function save(){ // 등록버튼 클릭하면 동작함수
     num++;
 
     //삭제 아이콘 클릭 기능 적용
-    // $(".del").on("click", del_memo );
+    $(".del").on("click", del_memo );
 
 
-    // console.log( text+ " "+ 중요도 );
+    console.log( text+ " "+ 중요도 );
 
 }
-function del_memo(n){
+function del_memo(){
+    var div = $(this);
+    var parent = div.parent();
+    parent.remove();
+    // for(var i in memo_list){ // memo객체저장된 배열 전체 조회
+    //     if(n==memo_list[i].num){ // 삭제할 번호와 일치하는 memo객체찾기
+    //         $(".memoItem").eq(i).remove(); // 배열에서 삭제
+    //         memo_list.splice(i,1);
+    //     }
+    // };
     
-    for(var i in memo_list){ // memo객체저장된 배열 전체 조회
-        if(n==memo_list[i].num){ // 삭제할 번호와 일치하는 memo객체찾기
-            $(".memoItem").eq(i).remove(); // 배열에서 삭제
-            memo_list.splice(i,1);
-        }
-    };
-    
-    $(".memoList").empty(); // 목록 태그 전체 비우기
-    for(var v of memo_list){ //memo_list 배열에 있는 memo객체 다시출력
-        $(".memoList").prepend(v.create(v.num));
-    }
+    // $(".memoList").empty(); // 목록 태그 전체 비우기
+    // for(var v of memo_list){ //memo_list 배열에 있는 memo객체 다시출력
+    //     $(".memoList").prepend(v.create(v.num));
+    // }
     
     // var idv = $(this); //삭제하고자 클릭한 아이콘의 div
 
