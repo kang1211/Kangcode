@@ -107,7 +107,7 @@ function change_pcl(){
 
 }
 $(function(){
-//    zone_create();
+   zone_create();
    zone_draw();
 
    $("#enroll").on("click",game_init);
