@@ -1,20 +1,20 @@
-const zone_name=[
-                "복지기금","화성","성남","창원","제주","용인","수원","울산",
-                "인천공항","청주","광주","부천","대구","남양주","인천","포항",
-                "복지기금납부","천안","부산","전주","서울","안산","대전",
-                "무인도","안양","김해","평택","시흥","파주","의정부","김포","출발"
-];
-const zone_color=["#FF2424","#53C14B","#FFBB00","#121212"];//각 면의 색상
-const land_purchase=[ // 각 도시의 매입 가격(만단위)
-    0, 25, 27, 26, 34, 28, 27, 39,
-    0, 16, 42, 20, 45, 19, 48, 27,
-    0, 21, 52, 20, 80, 22, 120,
-    0, 12, 10, 15, 12, 9, 9, 7, 0
-];
+// const zone_name=[
+//                 "복지기금","화성","성남","창원","제주","용인","수원","울산",
+//                 "인천공항","청주","광주","부천","대구","남양주","인천","포항",
+//                 "복지기금납부","천안","부산","전주","서울","안산","대전",
+//                 "무인도","안양","김해","평택","시흥","파주","의정부","김포","출발"
+// ];
+// const zone_color=["#FF2424","#53C14B","#FFBB00","#121212"];//각 면의 색상
+// const land_purchase=[  // 각 도시의 매입 가격 ( 만단위)
+//     0, 25, 27, 26, 34, 28, 27, 39,
+//     0, 16, 42, 20, 45, 19, 48, 27, 
+//     0, 21, 52, 20, 80, 22, 120,
+//     0, 12, 10, 15, 12, 9, 9, 7, 0
+// ];
 
-const bg_image=[// 모서리구역의 배경이미지
-    "사회복지기금.png","우주여행.jpg","무인도.png","출발.jpg"
-];
+// const bg_image=[// 모서리구역의 배경이미지
+//     "사회복지기금.png","우주여행.jpg","무인도.png","출발.jpg"
+// ];
 
 // 각 구역의 객체 생성자 함수
 // 구역 이름, 토지매입가격, 소유자, 색상, 기능(모서리부분), 이미지
@@ -45,28 +45,28 @@ let zone = new Array(); //각 구역의 객체 저장 배열
 let player_list = new Array();// 게임 참가자
 
 // 함수정의
-function zone_create(){
-    for(var i=0; i<zone_name.length;i++){
-        var color = zone_color[0];
-        if( i>=0 & i<=7)
-        color = zone_color[2];
-        if((i>=8 & i<=23) & i%2==0)
-        color = zone_color[3];
-        if((i>=8 & i<=23) & i%2==1)
-        color = zone_color[1];
+// function zone_create(){
+//     for(var i=0; i<zone_name.length;i++){
+//         var color = zone_color[0];
+//         if( i>=0 & i<=7)
+//         color = zone_color[2];
+//         if((i>=8 & i<=23) & i%2==0)
+//         color = zone_color[3];
+//         if((i>=8 & i<=23) & i%2==1)
+//         color = zone_color[1];
 
-        var image = "";
-        if(i==0)image = bg_image[0];
-        if(i==8)image = bg_image[1];
-        if(i==23)image = bg_image[2];
-        if(i==31)image = bg_image[3]
+//         var image = "";
+//         if(i==0)image = bg_image[0];
+//         if(i==8)image = bg_image[1];
+//         if(i==23)image = bg_image[2];
+//         if(i==31)image = bg_image[3]
 
-        zone.push(new zone_Object(
-            zone_name[i], land_purchase[i], "",color,"",image
-        ));
-    }
-    console.log(zone);
-}
+//         zone.push(new zone_Object(
+//             zone_name[i], land_purchase[i], "",color,"",image
+//         ));
+//     }
+//     console.log(zone);
+// }
 
 // 구역객체들을 zone 클래스 div에 적용하기
 function zone_draw(){
@@ -81,6 +81,7 @@ function zone_draw(){
     }
     });
 }
+//게임 현황
 function game_init(){
     var pc = Number($("#player_number").val());
 
@@ -106,9 +107,12 @@ function game_init(){
 function change_pcl(){
 
 }
+//항시 작용
 $(function(){
-   zone_create();
+    // zone_show();
+    //    zone_create();
    zone_draw();
+   
 
    $("#enroll").on("click",game_init);
    $("#player_number").on("change",function(){
@@ -123,6 +127,15 @@ $(function(){
 // city.json으로 작성하세요
 // function  zone_create를 작동하면 내용이 들어가도록
 
-// $.getJSON("../data/game.json",function(data){
-//     show(data);
-// });
+$.getJSON("./data/city.json",function(data){
+    zone_show(data);
+});
+
+function zone_show(data){
+    for(var i=0;i<32;i++){
+    zone.push(new zone_Object(
+    data[i].name, data[i].purchase, "",data[i].color,"",data[i].back
+    ));
+};
+    console.log(zone);
+};

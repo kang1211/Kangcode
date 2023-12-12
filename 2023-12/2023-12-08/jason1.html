@@ -82,10 +82,11 @@
     // xml.send();
 
     $.getJSON("./data/game.json", function(data){
-        show(data);
+        abc(data);
     });
-    function show(data){
+    function abc(data){
         $("#view").html(`<h3>${data.name}</h3>`);
+        $("#view").append(`<h3>${data.힘}</h3>`);
     }
 
 </script>

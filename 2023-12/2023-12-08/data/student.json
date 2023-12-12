@@ -10,5 +10,35 @@
     {
         "name":"이성계",
         "age":47
-    }
+    },
+    {
+        "name":"복지기금",
+        "purchase":0,
+        "owner":" ",
+        "color":"#FF2424",
+        "func":" ",
+        "back":"사회복지기금.png"
+    },
+    {
+        "name":"화성",
+        "purchase":25,
+        "owner":"",
+        "color":"#FF2424",
+        "func":"",
+        "back":""
+    },
+    {
+        "name":"성남","purchase":"27","owner":"","color":"#FF2424","func":"","back":""
+    },
+    {
+        "name":"창원","purchase":"26","owner":"","color":"#FF2424","func":"","back":""
+    },
+    {
+        "name":"제주","purchase":"34","owner":"","color":"#FF2424","func":"","back":""
+    },
+    {
+        "name":"용인","purchase":"28","owner":"","color":"#FF2424","func":"","back":""
+    },
+    {"name":"수원","purchase":"27","owner":"","color":"#FF2424","func":"","back":""},
+    {"name":"울산","purchase":"39","owner":"","color":"#FF2424","func":"","back":""}
 ]
