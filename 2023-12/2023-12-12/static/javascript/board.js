@@ -191,7 +191,10 @@ function welfare(gamer){ // 위치에 도착한 복지기금 전액 가져가기
 };
 
 function airport(gamer){ // 플레이어가 원하는곳으로 이동(마우스 클릭)
-//------과제---------
+    alert(`공항에 도착하였습니다.`);
+    $(".zone").on("click",function(){
+    gamer.location = zone[this];
+});
 };
 
 function fundpayment(gamer){// 플레이어의 돈을 복지기금으로 지불(20만원)
@@ -202,7 +205,15 @@ function fundpayment(gamer){// 플레이어의 돈을 복지기금으로 지불(
 };
 
 function island(gamer){// 3턴동안 탈출 불가
-//------과제---------
+    alert(`무인도에 갇혔습니다.앞으로턴동안 이동불가`);
+    player.drift_turn = 3;
+    zone_location = old_zone;
+    player.drift_turn -= 1;
+    turn++;
+    if(drift_turn == 0)
+    player = island_;
+
+    
 };
 
 function complete(gamer){// 출발지를 도착하거나 통과하면 20만원 보너스
