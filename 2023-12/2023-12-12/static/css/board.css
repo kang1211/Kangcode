@@ -84,7 +84,7 @@
 .pn{padding:5px;width:100%;}
 .pn input[type=range]{
     width:150px;
-    -webkit-appearance:none;
+    -webkit-apearance:none;
     background:green;
     border-radius:10px;
 }
