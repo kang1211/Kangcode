@@ -38,7 +38,7 @@ KOFIC발급키
 12월 14일
 1. java https://www.oracle.com/java/technologies/
 java SE 11.0.21(LTS)
-Extension Pack for Java
+    Extension Pack for Java
 2. 보기
 명령팔렛트
 java project
@@ -64,5 +64,27 @@ eclipse 형태 java로 전환 우상단 테이블 아이콘 클릭
 git hub 연결
 eclipse window other clone a git repository
 어째서 안되는거죠
+
+package study121801;
+
+public class homeWork1218 {
+	public static void main(String[] args) {
+		int[] score = {30, 4, 50, 60, 14, 80, 45, 72, 94, 25};
+		int avg = (30+4+50+60+14+80+45+72+94+25)/10;
+		String[] rating = new String[10];
+		int k=0;
+		
+		for(int i=0;i<score.length;i++) {
+			if(score[i]<=avg) {
+				rating[k] = "F";
+				k++;
+			}else{
+				rating[k] = "A";
+				k++;
+			}
+			System.out.print(rating[i]);	
+		}
+	}
+}
 
 -->
