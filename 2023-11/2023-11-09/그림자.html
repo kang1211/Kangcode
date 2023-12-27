@@ -48,7 +48,7 @@
     }
     .image img{
         height:200px;
-        transition:scale(1);
+        transform:scale(1);
         transition: transform 3s ease-in;
     }
     .image:hover img{
@@ -74,7 +74,7 @@
 </html>
 <!--
     transform : 텍스트, 이미지, 도형, 영상 등에 변화를 주기 위한 속성
-        기울기(matrix), 크기(scale), 회전(rotate), 이동 효과(translate를 부여할 수 있다.
+        기울기(matrix), 크기(scale), 회전(rotate), 이동 효과(translate)를 부여할 수 있다.
     transition : 상태의 변화를 동적으로 표현, 지정한 시간에 맞춰 변화되는 과정을 표현
         주의사항 : 사용할때는 반드시 처음상태값과 변화된 마지막값을 알려줘야한다.
         박스의 너비가 변하는 과정을 transition으로 표현한다면
@@ -84,6 +84,6 @@
     transition-duration : 시간 설정 초단위(s), transditinon효과가 진행되는 시간
     transition-property : 변화되는 CSS속성 지정(예 width, height, left, top, background 등)
         모든 CSS 속성 지정은 all이다.
-    transition-timing-function transitino 효과가 속도 설정
+    transition-timing-function transition 효과가 속도 설정
         ease, ease-in, ease-out, ease-in-out, linear, step-end
 -->
