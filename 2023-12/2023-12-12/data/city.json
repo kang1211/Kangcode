@@ -1,5 +1,5 @@
 [
-{"num":16,"name":"복지기금","purchase":0,"owner":"","color":"#FF2424","func":"","back":"사회복지기금.png"},
+{"num":16,"name":"복지기금","purchase":0,"owner":"","color":"#FF2424","func":"","back":"복지기금.jpg"},
 {"num":17,"name":"화성","purchase":25,"owner":"","color":"#FF2424","func":"","back":""},
 {"num":18,"name":"성남","purchase":27,"owner":"","color":"#FF2424","func":"","back":""},
 {"num":19,"name":"창원","purchase":26,"owner":"","color":"#FF2424","func":"","back":""},
@@ -8,7 +8,7 @@
 {"num":22,"name":"수원","purchase":27,"owner":"","color":"#FF2424","func":"","back":""},
 {"num":23,"name":"울산","purchase":39,"owner":"","color":"#FF2424","func":"","back":""},
 
-{"num":24,"name":"인천공항","purchase":0,"owner":"","color":"#FF2424","func":"","back":"우주여행.jpg"},
+{"num":24,"name":"인천공항","purchase":0,"owner":"","color":"#FF2424","func":"","back":"인천공항.jpg"},
 {"num":15,"name":"청주","purchase":16,"owner":"","color":"#53C14B","func":"","back":""},
 {"num":25,"name":"광주","purchase":42,"owner":"","color":"#FFBB00","func":"","back":""},
 {"num":14,"name":"부천","purchase":20,"owner":"","color":"#53C14B","func":"","back":""},
@@ -16,7 +16,7 @@
 {"num":13,"name":"남양주","purchase":19,"owner":"","color":"#53C14B","func":"","back":""},
 {"num":27,"name":"인천","purchase":48,"owner":"","color":"#FFBB00","func":"","back":""},
 {"num":12,"name":"포항","purchase":27,"owner":"","color":"#53C14B","func":"","back":""},
-{"num":28,"name":"복지기금납부","purchase":0,"owner":"","color":"#FFBB00","func":"","back":""},
+{"num":28,"name":"복지기금납부","purchase":0,"owner":"","color":"#FFBB00","func":"","back":"기금납부.jpg"},
 {"num":11,"name":"천안","purchase":21,"owner":"","color":"#53C14B","func":"","back":""},
 {"num":29,"name":"부산","purchase":52,"owner":"","color":"#FFBB00","func":"","back":""},
 {"num":10,"name":"전주","purchase":20,"owner":"","color":"#53C14B","func":"","back":""},
