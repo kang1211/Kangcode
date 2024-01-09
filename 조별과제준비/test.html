@@ -6,36 +6,99 @@
     <title>Test</title>
 
 
-    <!--jquery-->
+<!--jquery-->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <!--bootstrap-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<!--googleFont-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 
+<link rel="icon" href="./static/images/naver.ico">
 <link rel="stylesheet" href="./static/css/test.css">
 <script src="./static/javascript/test.js"></script>
 
 </head>
 <body>
-    <div id="wrap">
-        <header class="topBar" style="opacity:1;">
-        <div class="topBarIn">
-            <a href="test2.html" class="topLogo">    
-                <img src="./static/images/logo.svg" alt="로고">
+<header>
+    <div class="top1">
+        <div class="top1_right">
+            <a href="./test2.html">
+            <img src="./static/images/defaultLogo.png" alt="메인아이콘">
             </a>
-            <div class="list">
-            <button>list1</button>
-            <button>list2</button>
-            <button>list3</button>
-            <button>list4</button>
+            <div class="header_search">
+                <span class="ant-input-affix">
+                    <input type="text" class="ant-input" placeholder="검색어를 입력해 주세요." value>
+                    <span class="search_icon">
+                        <div>
+                            <img src="./static/images/icon_search_22.svg" alt="돋보기" width="20px">
+                        </div>
+                    </span>
+                </span>
+                <div class="hidden"></div>
+            </div>
+
+            <div class="popu">
+            <div class="popularity">
+                <span>인기검색어</span>
+            </div>
+            <div class="popularity_item">
+                    1. 아직 모르겠음
+            </div>
             </div>
         </div>
-        </header>
+
+        <div class="top1_right">
+            <div class="top_icon">
+                <div width="26px"><i class="bi bi-bell"></i></div>
+                <span>알림</span>
+            </div>
+            <div class="top_icon">
+                <div><i class="bi bi-ticket-perforated"></i></div>
+                <span>웰컴쿠폰</span>
+            </div>
+            <div class="top_icon">
+                <div><i class="bi bi-person"></i></div>
+                <span>로그인</span>
+            </div>
+            <div class="top_icon">
+                <div><i class="bi bi-calendar2-check"></i></div>
+                <span>예약내용</span>
+            </div>
+        </div>
     </div>
-    <div id="wrap2">
-        <main>
-        </main>
+
+    <div class="top2">
+        <div class="top2_left">
+        <ul>
+            <div class="menu_logo" style="width: 22px; height: 22px;"><img src="./static/images/icon_menu_22.svg" alt="메뉴로고" width="22px" height="22px"></div>
+            <div class="menu"><a href="./test2.html" style="color:limegreen">전체메뉴</a></div>
+            <li class="menu"><a href="./test2.html">해외여행</a></li>
+            <li class="menu"><a href="./test2.html">국내여행</a></li>
+            <li class="menu"><a href="./test2.html">항공</a></li>
+            <li class="menu"><a href="./test2.html">호텔</a></li>
+            <li class="menu"><a href="./test2.html">투어/패스</a></li>
+        </ul>
+        </div>
+
+        <div class="top2_right">
+            <ul>
+                <div><a href="./test2.html"  style="text-decoration:none; color:black;    font-family: 'Noto Sans KR', sans-serif;">기획전</a></div>
+                <div><a href="./test2.html" style="text-decoration:none; color:black;    font-family: 'Noto Sans KR', sans-serif;">이벤트</a></div>
+                <div><a href="./test2.html" style="text-decoration:none; color:black;    font-family: 'Noto Sans KR', sans-serif;">고객센터</a></div>
+            </ul>
+        </div>
     </div>
-    <footer></footer>
+</header>
+    
+<main>
+
+</main>
+
+<footer>
+
+</footer>
     
 </body>
 </html>
