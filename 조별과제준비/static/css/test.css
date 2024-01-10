@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing:border-box;
     margin:0;
@@ -149,10 +155,15 @@ ul{
 .main1{
     position:relative;
 }
+.main1_container{
+    height:700px;
+    width:100%;
+    position:relative;
+}
 .slide_image1{
     height:520px;
     width:100%;
-    background-color:aquamarine;
+    background-color:rgb(77, 77, 255);
     position:absolute;
     left:0px;
     display:flex;
@@ -170,4 +181,15 @@ ul{
     z-index:100;
     position:absolute;
     width:1200px;
+}
+.sit{
+    font-family: 'JalnanGothic';
+}
+.slide_bt{
+    height:32px;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    bottom:1px;
+    left:350px;
 }

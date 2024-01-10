@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 및 회원가입 예제</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>로그인</h2>
+        <label for="username">아이디:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+        <label for="rememberMe">로그인 정보 저장</label>
+        <button type="button" onclick="login()">로그인</button>
+    </form>
+
+    <form id="signupForm">
+        <h2>회원가입</h2>
+        <!-- 추가 필드들 -->
+        <button type="button" onclick="signup()">회원가입</button>
+    </form>
+
+    <script>
+        function login() {
+            // 로그인 로직 추가
+            alert("로그인 클릭");
+        }
+
+        function signup() {
+            // 회원가입 로직 추가
+            alert("회원가입 클릭");
+        }
+    </script>
+</body>
+</html>
