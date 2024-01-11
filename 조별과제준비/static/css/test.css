@@ -160,7 +160,7 @@ ul{
     width:100%;
     position:relative;
 }
-.slide_image1{
+.slide_img1_1{
     height:520px;
     width:100%;
     background-color:rgb(77, 77, 255);
@@ -170,7 +170,7 @@ ul{
     justify-content:center;
     align-items:center;
 }
-.slide_image2{
+.slide_img1_2{
     width:1340px;
     height:700px;
     background-image:url(../images/slied_image2.avif);
