@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 우측 이동 이미지 슬라이드</title>
+    <style>
+        #slider-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        #prev, #next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        #prev:hover, #next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+<div id="slider-container">
+    <div id="slider">
+        <div class="slide"><img src="./static/images/복지기금.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="./static/images/인천공항.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="./static/images/중앙.jpg" alt="Slide 3"></div>
+        <!-- 추가 이미지 -->
+        <div class="slide"><img src="./static/images/출발.jpg" alt="Slide 1"></div>
+    </div>
+</div>
+
+<button id="prev" onclick="prevSlide()">이전</button>
+<button id="next" onclick="nextSlide()">다음</button>
+
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slider = document.getElementById('slider');
+        const slideWidth = document.querySelector('.slide').clientWidth;
+        const newPosition = -index * slideWidth;
+        slider.style.transform = `translateX(${newPosition}px)`;
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        const totalSlides = document.querySelectorAll('.slide').length;
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        const totalSlides = document.querySelectorAll('.slide').length;
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    // 무한 우측 이동을 위한 자동 슬라이드 설정
+    // setInterval(() => {
+    //     nextSlide();
+    // }, 3000); // 3초마다 자동 전환
+</script>
+
+</body>
+</html>

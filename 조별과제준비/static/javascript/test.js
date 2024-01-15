@@ -42,7 +42,7 @@ $(function(){
         slider.style.transform = `translateX(${-count * 100}%)`; // 페이지 전환 위치
     }
 
-    // setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 10000);
 
     $(".slide_bt_right").on("click", nextSlide); // 페이지 오른쪽 버튼
     $(".slide_bt_left").on("click", prevSlide); // 페이지 왼쪽 버튼
