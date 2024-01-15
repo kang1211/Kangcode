@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>왼쪽에서 오른쪽으로 테두리 색 채우기</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            border: 10px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .border-gradient {
+            width: 0;
+            height: 100%;
+            background: linear-gradient(to right, red, yellow, green, blue);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: width 0.5s ease;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="border-gradient"></div>
+        클릭하세요
+    </div>
+</body>
+</html>
