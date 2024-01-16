@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* 배경에 투명도 추가 */
+      justify-content: center;
+      align-items: center;
+    }
+
+    #popup {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openPopup()">Open Popup</button>
+
+  <div id="overlay">
+    <div id="popup">
+      <span id="close-btn" onclick="closePopup()">X</span>
+      <h2>Your Popup Content Goes Here</h2>
+      <!-- 추가적인 팝업 내용을 원하는대로 추가 -->
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      var overlay = document.getElementById('overlay');
+      overlay.style.display = 'flex';
+    }
+
+    function closePopup() {
+      var overlay = document.getElementById('overlay');
+      overlay.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
