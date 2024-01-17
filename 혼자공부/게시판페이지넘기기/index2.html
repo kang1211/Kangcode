@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판 페이지 넘기기 예제</title>
+</head>
+<body>
+
+<table>
+<tbody id="content">
+  <!-- 페이지 내용이 여기에 동적으로 로드됩니다. -->
+</tbody>
+</table>
+
+<div id="pagination">
+  <!-- 페이지 네비게이션 버튼들이 여기에 생성됩니다. -->
+</div>
+
+<script>
+  // 가상의 게시판 데이터 (실제로는 서버에서 가져와야 합니다)
+  let board_index1 = [];
+  const boardData = [
+
+    // 필요에 따라 더 많은 페이지 데이터를 추가할 수 있습니다.
+  ];
+
+  // 초기 페이지 로드
+  loadPage(0);
+
+  function loadPage(pageNumber) {
+    // 해당 페이지의 내용을 가져와서 동적으로 로드
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = `<p>${boardData[pageNumber]}</p>`;
+
+    // 페이지 네비게이션 버튼 생성
+    const paginationDiv = document.getElementById('pagination');
+    paginationDiv.innerHTML = "";
+
+    for (let i = 0; i < boardData.length; i++) {
+      const button = document.createElement('button');
+      button.innerText = i + 1;
+      button.addEventListener('click', function () {
+        loadPage(i);
+      });
+      paginationDiv.appendChild(button);
+    }
+  }
+</script>
+
+</body>
+</html>
